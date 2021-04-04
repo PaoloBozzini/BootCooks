@@ -1,0 +1,12 @@
+.container {
+      opacity: 0;
+      transform: translateY(10rem);
+      visibility: hidden;
+      transition: transform .7s ease-out, opacity .7s ease-out;
+}
+
+.isVisible{
+      opacity: 1;
+      transform: none;
+      visibility: visible;
+}

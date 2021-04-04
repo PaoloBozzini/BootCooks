@@ -1,0 +1,57 @@
+@import '../../styles/config';
+
+.container {
+      perspective: 150rem;
+      position: relative;
+  
+
+      & .side {
+            transition: all .8s ease;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+            overflow: auto;
+
+            &Front {
+                  background-color: $color-primary-light;
+                  transform:rotateY(0deg);
+          
+            }
+
+            &Back {
+                  transform: rotateY(180deg);
+                  padding: 3rem;
+
+                  & > h3 {
+                        position: relative;
+                        color:white;
+                        font-size: 4rem;
+                  }
+
+                  & > a {
+                        position: absolute;
+                        font-size: 2rem;
+                        bottom: 3rem;
+                        color:white;
+                        @include marginBottomHover($color-white);
+                        @include respond(phone){
+                              position: relative;
+                              bottom: 0;
+                        }
+                  }
+            }
+      }
+
+
+      &:hover .sideFront {
+            transform: rotateY(-180deg);
+      }
+    
+      &:hover .sideBack {
+      transform: rotateY(0);
+      }
+}

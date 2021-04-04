@@ -1,0 +1,19 @@
+@import '../../styles/config';
+
+
+.section {
+      padding: $section-component-padding-top $section-component-padding $section-component-padding ;
+      min-height: 120rem;
+      max-width: $default-max-width;
+      width: 100%;
+      background-color: $color-white;
+      margin-bottom: 5rem;
+      z-index: 99;
+      position: relative;
+     
+
+      & h2 {
+            margin-bottom: 2rem;
+      }
+
+}

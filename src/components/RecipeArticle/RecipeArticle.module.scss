@@ -1,0 +1,41 @@
+@import '../../styles/config';
+
+.recipe {
+      position: relative;
+
+      & > div {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: rgba($color-secondary, 0.8);
+            opacity: 0;
+            transition: opacity 0.4s;
+            z-index: 99;
+            @include respond(phone){
+                  opacity: 1;
+            }
+
+            & > h3 { 
+                  color: $color-white;
+                  @include absCenter
+            }
+      }
+
+
+      & > img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.3s ease-in-out;
+      }
+
+      &:hover > div {
+            opacity: 1;
+      }
+
+      &:hover > img {
+            transform: scale(0.8);
+            
+      }
+}

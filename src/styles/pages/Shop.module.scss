@@ -1,0 +1,105 @@
+@import '../../styles/config';
+
+.container {
+      display: flex;
+      flex-wrap: wrap;
+      margin-left: -2rem;
+      & > * {
+            flex-grow: 1;
+            margin: 0 0 2rem 2rem
+      }
+}
+
+.cartIcon{
+      position: absolute;
+      right: $section-component-padding;
+      top: $section-component-padding-top;
+      cursor: pointer;
+
+      & img {
+            width: 3rem;
+            display: block;
+      }
+
+      & div {
+            position: absolute;
+            top: -.8rem;
+            right: -1rem;
+            background-color: $color-primary;
+            border-radius: 50%;
+            width: 2rem;
+            height: 2rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.2rem
+      }
+}
+
+.cart{
+      display: flex;
+      flex-direction: column;  
+      
+      &Item{
+            display: flex;
+            justify-content: space-between;
+
+            &:not(:last-child){
+                  margin-bottom: 1rem;
+            }
+
+
+            & > .left{
+                  display: flex;
+
+                  & > img {
+                        width: 10rem;
+                        height: 10rem;
+                        object-fit: cover;
+                        display: block; 
+                        @include respond(phone-small){
+                              width: 5rem;
+                        } 
+                  }
+            
+                  & > div {
+                        margin-left: 1rem;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+
+                        & > p {
+                              line-height: initial;
+                              text-align: initial;
+                              margin-bottom: 0;
+                        }
+                  }
+
+                  & button:not(:last-child){
+                        margin-right: 1rem;
+                  }
+            }
+      }
+
+
+      & .total {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-top: 6rem;
+            border-top: 1px solid $color-dark;
+            padding-top: 2rem;
+
+            & > h3 {
+                  flex: 1
+            }
+      }
+}
+
+
+
+
+.message{
+      margin: 10rem auto;
+      text-align: center;
+}

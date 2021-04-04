@@ -1,0 +1,35 @@
+@import '../../styles/config';
+
+.backdrop {
+      width: 100%;
+      height: 100%;
+      position: fixed;
+      z-index: 100;
+      left: 0;
+      top: 0;
+      background-color: rgba($color-dark, 0.5);
+  }
+
+
+.modal {
+      position: fixed;
+      z-index: 500;
+      background-color: white;
+      padding: 2rem;
+      left: 15%;
+      top: 0;
+      overflow: scroll;
+      transition: opacity .4s ;
+      @include respond(phone){
+            left: 0;
+      }
+
+}
+  
+.closeIcon {
+      position: absolute;
+      right: 2rem;
+      top: 2rem;
+      display: block;
+      cursor: pointer;
+}

@@ -1,0 +1,104 @@
+@import '../../../../styles/config';
+
+.container {
+            padding: 8rem $default-padding-horizontal 0;
+            max-width: $default-max-width;
+            display: flex;
+            justify-content: space-between;
+            height: 65rem;
+            width: 100%;
+            @include respond(phone-small){
+                  flex-direction: column;
+                  height: 100rem;
+            }
+}
+
+.left {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      @include respond(phone-small){
+            margin-top: 5rem;
+      }
+      
+      
+
+      & h1 {
+            font-size: 3rem;
+      }
+
+
+      & nav {
+            height: 25rem;
+      }
+
+      & nav:first-of-type{
+            background-color: $color-primary;
+      }
+
+      & p {
+            
+            bottom: 0;
+            line-height: normal;
+            font-size: .5rem;
+            color: $color-grey-light;
+      }
+
+}
+
+
+.right {
+      width: 40%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      @include respond(phone-small){
+            order: -1;
+            width: 100%;
+      }
+
+      & p {
+            color: $color-grey;
+            margin-top: 1rem;
+            font-size: 1.3rem;
+      }
+
+      & input {
+            padding: 1.5rem 0 ;
+            width: 100%;
+            margin-top: 1rem; 
+            background: linear-gradient($color-secondary,$color-secondary) bottom; 
+            background-size: 100% .7rem; 
+            background-repeat:no-repeat; 
+            transition: all 0.4s;
+      
+            &:hover,
+            &:focus{
+                background-size: 100% 1px;
+          }
+
+      }
+
+      & div:last-of-type  {
+
+            & h3 {
+                  margin-bottom: 3rem;
+            }
+
+            & div {
+                  align-self: flex-end;
+                  height: 25rem;
+                  background-color: $color-secondary;
+
+                  @include respond(phone){
+                        height: 20rem;
+                  }
+                  @include respond(phone-small){
+                        height: 5rem;
+                  }
+            }
+            
+      }
+}

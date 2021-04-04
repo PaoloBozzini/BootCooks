@@ -1,0 +1,49 @@
+@import '../../../../styles/config';
+
+
+.container {
+      padding: 0 $default-padding-horizontal;
+      display: flex;
+      max-width: $default-max-width;
+      width: 100%;
+      height: 100%;
+      align-items: flex-end;
+      @include respond(phone){
+            width: initial;
+            height: initial;
+      }
+      @include respond(phone-small){
+            width: 100%;
+            padding: 0;
+      }
+
+      & > div {
+            position: relative;
+            @include respond(phone-small){
+                  width: 100%;  
+                  text-align: center;
+            }
+
+            & h1 {
+                  font-size: 7rem;
+                  line-height: 6rem;
+                  @include respond(phone){
+                        font-size: 10vw;
+                        line-height: 10vw;
+                  }
+            }
+
+            & nav {
+                  position: absolute;
+                  background: $color-primary;
+                  width: 100%;
+                  height: 8rem;
+                  z-index: 99;
+                  @include respond(phone-small){
+                        height: 5rem;
+                  }
+            }
+      }
+}
+
+

@@ -1,0 +1,21 @@
+@import '../../../../../styles/config';
+
+.navigationItem {
+      display: flex;
+      align-items: center;
+
+      & a {
+            text-transform: uppercase;
+      }
+}
+
+
+.light{
+      color: $color-white;
+}
+
+.dark{
+      color: $color-dark
+} 
+
+    

@@ -1,0 +1,16 @@
+@import '../../../../../../styles/config';
+
+.icon {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      
+
+      & img{
+            fill: $color-dark;
+            height: 4.5rem;
+            @include respond(phone){
+                  height: 4.5vw;
+            }
+      }
+}

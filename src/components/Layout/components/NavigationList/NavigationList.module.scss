@@ -1,0 +1,13 @@
+.list {
+      display: flex;
+      justify-content: space-evenly;
+      height: 100%;
+}
+
+.row{
+      align-items: flex-end;
+}
+
+.column {
+      flex-direction: column;
+}

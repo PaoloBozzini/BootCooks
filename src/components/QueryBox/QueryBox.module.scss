@@ -1,0 +1,93 @@
+@import '../../styles/config';
+
+.container{
+      display: flex;
+      flex-wrap: wrap;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      margin-bottom: 2rem;
+      
+      & > * {
+            flex: 1;
+      }
+}
+
+.isVisible{
+
+      & > .inputToggle {
+            background-color: $color-secondary-dark;
+      }
+
+      & > .inputOptions{
+            height: 70vh;
+            opacity: 1;
+            padding: 2rem
+      }
+
+      & > .inputText {
+            height: 10vh;
+            opacity: 1;
+      }
+           
+}
+
+.input{
+
+      display: flex;
+      flex-direction: column;
+      min-width: 20rem;
+      position: relative;
+     
+      &Toggle {
+      background-color: $color-secondary;
+      color: $color-white;
+      padding: 2rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: all .2s linear;
+      height: 7rem;
+      z-index: 99;
+      cursor: pointer;
+
+            &:hover{
+                  box-shadow: inset 0px 0px 1rem $color-secondary-dark;
+           
+            }
+
+            
+
+            & img{
+                  width: 6rem;
+                  height: 6rem;
+            }
+
+
+      }
+
+      &Options, &Text{
+            display: flex;
+            height: 0;
+            opacity: 0;
+            transition: height .2s, opacity .2s;
+            width: 100%;
+            z-index: 200;
+            background-color: rgba($color-white, 0.9);
+            border-bottom: 7px solid $color-secondary-dark;
+            top: 7rem;
+            position: absolute;
+            box-shadow: 1rem 6rem 8rem rgba($color-dark, 0.5);
+      }
+
+      &Options{
+            overflow: scroll;
+            justify-content: space-evenly;
+            flex-direction: column;
+            
+      }
+}
+
+.fullWidthDropdown{
+      position: static;
+}

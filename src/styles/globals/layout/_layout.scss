@@ -1,0 +1,31 @@
+header, footer, main{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+}
+
+header{
+      height: 12rem;
+}
+
+
+main{
+      background-color: $color-primary-light;
+      height: 100%;
+      padding: 0 $default-padding-horizontal;
+      position: relative;
+      overflow: hidden;
+      @include respond(phone){
+            padding: 0;
+      }
+
+      section:first-child {
+            margin-top: 20rem;
+            @include respond(phone){
+                  margin-top: 10rem;
+            }
+      }
+}
+
+

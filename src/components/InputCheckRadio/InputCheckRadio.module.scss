@@ -1,0 +1,76 @@
+@import '../../styles/config';
+
+.container { 
+      display: block;
+      position: relative;
+      padding-left: 2.6rem;
+      cursor: pointer;
+      transition: all .2s;
+      user-select: none;
+
+      & input {
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+            height: 0;
+            width: 0;
+
+      }
+
+      & span {
+            height: 2.2rem;
+            width: 2.2rem;
+            border: 2px solid $color-primary;
+            position: absolute;
+            left: 0;
+            top: -0.2rem;
+
+            &::after {
+                  content: "";
+                  display: block;
+                  opacity: 0;
+                  transition: opacity .2s;
+                  @include absCenter;
+            }
+      }
+
+      &:hover input ~ span {
+            background-color: #eee;
+      }
+
+      & input:checked ~ span:after {
+            opacity: 1;
+      }
+}
+
+.radio{
+      & span{
+
+            &::after{
+                  height: .8rem;
+                  width: .8rem;
+                  background-color: $color-primary;
+            }
+      }
+
+}
+
+.checkbox{
+
+      & input:checked ~ span {
+            background-color: $color-primary;
+      }
+
+      & span{
+
+            &::after{
+                  width: .6rem;
+                  height: 1rem;
+                  border: solid $color-white;
+                  border-width: 0 3px 3px 0;
+                  left: 29%;
+                  transform: rotate(45deg) translate(-50%, -50%);
+            }
+      }
+
+}

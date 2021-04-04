@@ -1,0 +1,42 @@
+@import '../../styles/config';
+
+
+.btn {
+      border: none;
+      font-size: 1.8rem;
+      cursor: pointer;
+      padding: 1rem 1.6rem;
+      transition: all .3s;
+
+      &Dark {
+            background-color: $color-secondary;
+            color: $color-white;
+            &:hover{
+                  background-color: $color-secondary-dark;
+                  
+            }
+            &:disabled{
+                  background-color: $color-grey;
+            }
+      }
+
+      &White{
+            background-color: $color-white;
+            color: $color-dark;
+            &:disabled{
+                  background-color: $color-grey-light;
+            }
+      }
+
+      &:focus{
+            outline: none;
+      }
+
+
+      &:active{
+            transform: translateY(1px);  
+      }
+
+     
+
+}

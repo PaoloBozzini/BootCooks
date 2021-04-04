@@ -1,0 +1,190 @@
+@import '../config';
+
+.image{
+      width: 100vw;
+}
+
+
+.firstSection{
+      margin-top: -13vw;
+      @include respond(phone){
+            margin-top: 0;
+      }
+}
+
+.imageColor{
+      position: absolute;
+      width: 20vw;
+      height: 20vw;
+      right: calc(2rem + 10vw);
+      top: 14vw;
+      background-color: $color-secondary;
+      @include respond(phone){
+            position: static;
+            width: 100%;
+            height: 10rem;
+            line-height: 10rem;
+            text-align: center;
+      }
+
+      & h2 {
+            color: $color-white;
+            height: 100%;
+            transform: translate(50%, 35%);
+            letter-spacing: 1px;
+            font-size: 2vw;
+            @include respond(phone){
+                  transform: none;
+                  height: auto;
+                  text-align: center;
+                  line-height: 1.5;
+                  display: inline-block;
+                  vertical-align: middle;
+                  font-size: 2vw;
+            }
+            @include respond(phone-small){
+                  font-size: 3vw;
+            }
+
+      }
+}
+
+
+.grid1{
+     
+      display: grid;
+      grid-template-columns: 10vw 1fr 10vw;
+      grid-template-rows: repeat(3, minmax(100px, auto));
+      gap: 2rem;
+      min-height: calc(120rem - #{$section-component-padding-top} -  #{$section-component-padding} - 2.9rem);
+     
+      & .color {
+            &1 {
+                  background-color: #C09A6C;
+                  grid-row: 1 / 2;
+                  grid-column: 3 / -1;
+            }
+      
+            &2 {
+                  background-color: #7F4443;
+                  grid-row: 2 / 3;
+                  grid-column: 1 / 2;   
+            }
+      
+            &3 {
+                  background-color: #C56709;
+                  grid-row: 3 / -1;
+                  grid-column: 3 / -1;
+            }
+      }
+
+      & .item {
+            &1 {
+                  grid-column: 1 / 3;
+                  grid-row: 1 / 2;
+            }
+
+            &2{
+                  grid-column: 2 / -1;
+                  grid-row: 2 / 3 ;
+            }
+
+            &3{
+                  grid-row: 3 / -1;
+                  grid-column: 1 / span 2;
+            }
+      }       
+}
+
+
+
+
+.grid2{
+      height: 100%;
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(6, minmax(100px, auto));
+      gap: 2rem;
+      min-height: calc(120rem - #{$section-component-padding-top} -  #{$section-component-padding} - 2.9rem);
+      @include respond(phone){
+            grid-template-columns: 10vw 1fr 10vw;
+            grid-template-rows: repeat(6, auto);
+      }
+
+      & > div {
+            &:nth-child(1) {
+                  background-color: #C09A6C;
+                  grid-row: 1 / span 2;
+                  @include respond(tab-port){
+                        grid-column: 3 / -1;
+                  }
+            }
+      
+            &:nth-child(2) {
+      
+                  background-color: #7F4443;
+                  grid-column: 3 / -1;
+                  @include respond(tab-port){
+                        grid-row: 3 / span 2;
+                        grid-column: 1 / 2;
+                        z-index: 99;
+                  }
+
+                  @include respond(phone){
+                        display: none;
+                  }
+      
+            }
+      
+            &:nth-child(3) {
+                 background-color: #7e9c67;
+                 grid-row: 3;
+                 grid-column: 1 / span 2;
+                 @include respond(tab-port){
+                        grid-row: 5 / -1;
+                        grid-column: 3 / -1;
+                  }
+                 @include respond(phone){
+                        grid-column: 1 / 2;
+                  }
+            }
+
+            //CARD IMAGES
+
+            &:nth-child(4) {
+                  grid-column: 2 / 3;
+                  grid-row: 1 / span 2;
+                  @include respond(tab-port){
+                        grid-column: 1 / 3;
+                  }
+            }
+
+            &:nth-child(5){
+                  grid-column: 1 / span 2;
+                  grid-row: 4 / -1 ;
+                  @include respond(tab-port){
+                        grid-row: 5 / -1 ; 
+                  }
+                  @include respond(phone){
+                        grid-column: 2 / -1;
+                  }
+            }
+
+            &:nth-child(6){
+                  grid-column: 3 / -1;
+                  grid-row: 2 / -1;
+                  @include respond(tab-port){
+                        grid-row: 3 / span 2;
+                        grid-column: 2 / span 2;
+                  }
+                  @include respond(phone){
+                        grid-column: 1 / -1;
+                  }
+
+            }
+      }
+  
+}
+
+
